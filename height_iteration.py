@@ -1,4 +1,4 @@
-#pseudo code
+#pseudo code; use queue!
 '''
 node_count = size of queue
 if node count is 0, return height

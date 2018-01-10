@@ -1,3 +1,14 @@
+#pseudo code
+'''
+node_count = size of queue
+if node count is 0, return height
+else increase height
+
+while node count > 0
+pop node from front 
+push children to queue
+decrease node count
+'''
 class Node:
     def __init__(self, key):
         self.left = None
@@ -11,16 +22,14 @@ def find_height(root):
     queue = []
     queue.append(root)
     height = 0
-    
     while(True):
         node_count = len(queue)
-        node = queue[0]
         if node_count == 0:
             return height
-        else:
-            height += 1
+        height += 1
         
         while(node_count > 0):
+            node = queue[0]
             queue.pop(0)
             if node.left is not None:
                 queue.append(node.left)
